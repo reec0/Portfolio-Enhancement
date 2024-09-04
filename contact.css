@@ -1,0 +1,236 @@
+:root {
+    --nav-bg-color: rgb(30, 30, 30);
+    --nav-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --anchor-ff: Arial, Helvetica, sans-serif;
+    --nav-padding: 20px 50px;
+    --anchor-bg-color: #f5f5f5;
+    --anchor-hover: gray;
+    --anchor-color: #333;
+    --facebook-bg-color: #0866FF;
+    --gmail-bg-color: #DB6B5A;
+    --discord-bg-color: #5865F2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dcdcdc;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding);
+    background-color: var(--nav-bg-color);
+}
+
+.nav-lists > ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-lists > ul > li {
+    margin: 0 30px;
+}
+
+li > a {
+    color: var(--anchor-bg-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--anchor-ff);
+}
+.dark {
+    background-color: #333;
+    color: #dcdcdc;
+}
+.navy {
+    background-color: #001746;
+    color: #dcdcdc;
+    
+}
+#toggleBtn {
+    background-color: transparent;
+    border: none;
+    color: red
+}
+
+.Home-Title {
+    font-family: var(--anchor-ff);
+    font-size: 1.4rem;
+    color: var(--anchor-bg-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--anchor-hover);
+}
+
+.fa-envelope,
+.fa-discord,
+.fa-facebook {
+    font-size: 40px;
+}
+
+.fa-envelope {
+    color: var(--gmail-bg-color);
+}
+
+.fa-discord {
+    color: var(--discord-bg-color);
+}
+
+.fa-facebook {
+    color: var(--facebook-bg-color);
+}
+
+.Contact-Section-Container {
+    display: grid;
+    place-items: center;
+    padding: 200px 250px;
+    height: 100vh;
+    text-align: center;
+}
+
+.grid-items-1 {
+    margin-top: -100px;
+    font-family: var(--anchor-ff);
+    font-size: 2.1rem;
+}
+
+.grid-items-2 {
+    border: 5px solid transparent;
+    box-shadow: var(--nav-box-shadow);
+    font-family: var(--anchor-ff);
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 50px 300px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.gmail-title,
+.facebook-title,
+.discord-title {
+    font-size: 20px;
+    color: black;
+    font-family: var(--anchor-ff);
+}
+
+.gmail-title {
+    margin-left: 10px;
+}
+
+.discord-title {
+    margin-left: 4px;
+}
+
+.facebook-title {
+    margin-left: 10px;
+}
+
+li {
+    margin: 45px 0;
+}
+
+li > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .nav-container {
+        padding: 15px 40px;
+    }
+
+    .nav-lists > ul > li {
+        margin: 0 20px;
+    }
+
+    .Contact-Section-Container {
+        padding: 150px 150px;
+    }
+
+    .grid-items-2 {
+        padding: 40px 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-lists > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-lists > ul > li {
+        margin: 10px 0;
+    }
+
+    .Contact-Section-Container {
+        padding: 100px 50px;
+    }
+
+    .grid-items-1 {
+        font-size: 1.8rem;
+        margin-top: -50px;
+    }
+
+    .grid-items-2 {
+        padding: 30px 50px;
+        font-size: 1rem;
+    }
+
+    .fa-envelope,
+    .fa-discord,
+    .fa-facebook {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 10px 15px;
+    }
+
+    .nav-lists > ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Contact-Section-Container {
+        padding: 80px 20px;
+    }
+
+    .grid-items-1 {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .grid-items-2 {
+        padding: 20px 30px;
+        font-size: 0.9rem;
+    }
+
+    .fa-envelope,
+    .fa-discord,
+    .fa-facebook {
+        font-size: 30px;
+    }
+}
